@@ -15,8 +15,14 @@ namespace testNhieuForm
             InitializeComponent();
         }
 
+        /// <summary>
+        /// sự kiện (event) _FormClosing được tự động chạy khi form này đóng lại
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmAbout_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //cho frm bố (đã được tạo từ hàm main trong program.cs)
             Program.papa.Show();
         }
     }

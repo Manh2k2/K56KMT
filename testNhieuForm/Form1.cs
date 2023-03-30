@@ -17,7 +17,7 @@ namespace testNhieuForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            char[] sep = { '\n', '\r' };
+            char[] sep = { '\n', '\r' }; //sep này sẽ tách các dòng với nhau
             string[] dsTen = textBox1.Text.Split(sep, StringSplitOptions.RemoveEmptyEntries);
 
             textBox1.Clear();
@@ -29,13 +29,13 @@ namespace testNhieuForm
             }
         }
 
-        frmAbout fabout;
+        frmAbout fAbout;  //fAbout khai báo như này thì fAbout==null
         private void button2_Click(object sender, EventArgs e)
         {
-            if (fabout == null || fabout.IsDisposed)
-                fabout = new frmAbout();
+            if (fAbout == null || fAbout.IsDisposed) 
+                fAbout = new frmAbout(); //chỉ tạo mới khi chưa có hoặc đã đóng
             this.Hide(); //ẩn form1 đi
-            fabout.Show();
+            fAbout.Show();  //hiển frm About
         }
     }
 }

@@ -6,17 +6,19 @@ namespace testNhieuForm
 {
     internal static class Program
     {
+        static public Form1 papa;  //lưu form1 khi bắt đầu chạy
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        static public Form1 papa;
         [STAThread]
 
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(papa=new Form1());
+
+            //gán new Form1() cho biến papa, ko phải là toán tử so sánh nhé
+            Application.Run(papa=new Form1()); 
         }
     }
 }
