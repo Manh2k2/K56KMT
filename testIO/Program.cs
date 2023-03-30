@@ -20,9 +20,9 @@ namespace testIO
             int c = int.Parse(Items[2]);
             //AI coPilot
             int min = a;
-            if(b>min) min = b;
-            if(c>min) min = c;
-            Console.WriteLine($"max of a,b,c={min}");
+            if(b<min) min = b;
+            if(c<min) min = c;
+            Console.WriteLine($"Min of ({a},{b},{c})={min}");
             Console.ReadKey(true);
         }
     }
