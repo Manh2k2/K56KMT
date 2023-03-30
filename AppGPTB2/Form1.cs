@@ -40,5 +40,14 @@ namespace AppGPTB2
             textBoxKQ.Text = kq;
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            libChuanHoaXau.ChuanHoa ch = new libChuanHoaXau.ChuanHoa(textBox4.Text);
+
+            textBoxKQ.Text = ch.LamDep();
+            
+        }
     }
 }
