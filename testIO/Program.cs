@@ -19,10 +19,10 @@ namespace testIO
             int b = int.Parse(Items[1]);
             int c = int.Parse(Items[2]);
             //AI coPilot
-            int max = a;
-            if(b>max) max = b;
-            if(c>max) max = c;
-            Console.WriteLine($"max of a,b,c={max}");
+            int min = a;
+            if(b>min) min = b;
+            if(c>min) min = c;
+            Console.WriteLine($"max of a,b,c={min}");
             Console.ReadKey(true);
         }
     }
