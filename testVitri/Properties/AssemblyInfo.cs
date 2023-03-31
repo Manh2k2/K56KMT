@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("App demo for 56KMT")]
-[assembly: AssemblyDescription("PHẦN MỀM DEMO\r\n-Trả lời được cách hiển thị nhiều form trên 1 app\r\n- Papa trong program được dùng ở fAbout rất vi diệu (OOP)")]
+[assembly: AssemblyTitle("testVitri")]
+[assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("công ty TNUT")]
-[assembly: AssemblyProduct("produc demo lập trình C# trên windows. https://github.com/duycop/K56KMT")]
-[assembly: AssemblyCopyright("Copyright ©  2023 by Đỗ Duy Cốp")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("testVitri")]
+[assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("25b84dfc-7d81-4401-986f-c865392d7592")]
+[assembly: Guid("37c2f0b6-ea56-4559-b3bf-906c1c3d2c5d")]
 
 // Version information for an assembly consists of the following four values:
 //

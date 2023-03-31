@@ -33,12 +33,17 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(176, 113);
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(12, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 16);
+            this.label1.Size = new System.Drawing.Size(776, 104);
             this.label1.TabIndex = 0;
-            this.label1.Text = "PHẦN MỀM ACB,TÁC GIẢ : XYZ";
+            this.label1.Text = "PHẦN MỀM ACB,TÁC GIẢ : sv 56kmt";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.label1.MouseHover += new System.EventHandler(this.label1_MouseHover);
             // 
             // frmAbout
             // 
@@ -50,7 +55,6 @@
             this.Text = "frmAbout";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAbout_FormClosing);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

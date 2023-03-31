@@ -25,5 +25,15 @@ namespace testNhieuForm
             //cho frm bố (đã được tạo từ hàm main trong program.cs)
             Program.papa.Show();
         }
+
+        private void label1_MouseHover(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.Red;
+        }
+
+        private void label1_MouseLeave(object sender, EventArgs e)
+        {
+            label1.ForeColor = Color.Black;
+        }
     }
 }

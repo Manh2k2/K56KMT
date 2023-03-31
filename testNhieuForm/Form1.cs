@@ -32,10 +32,30 @@ namespace testNhieuForm
         frmAbout fAbout;  //fAbout khai báo như này thì fAbout==null
         private void button2_Click(object sender, EventArgs e)
         {
-            if (fAbout == null || fAbout.IsDisposed) 
+            if (fAbout == null || fAbout.IsDisposed)
                 fAbout = new frmAbout(); //chỉ tạo mới khi chưa có hoặc đã đóng
             this.Hide(); //ẩn form1 đi
             fAbout.Show();  //hiển frm About
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AboutBox1 f = new AboutBox1();
+            f.ShowDialog();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            CapNhatTime();
+        }
+
+        void CapNhatTime()
+        {
+            this.Text = "Demo for 56KMT - " + DateTime.Now.ToString("dd/MM/yyy - HH:mm:ss");
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            CapNhatTime();
         }
     }
 }
