@@ -32,8 +32,9 @@ namespace Racing
                     return Properties.Resources.yellow_car;
                 case 3:
                     return Properties.Resources.green_car;
+                default:
+                    return Properties.Resources.red_car;
             }
-            return Properties.Resources.red_car;
         }
         PictureBox[] allCars;
         private void cmdLoad_Click(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace Racing
                 }
             }
             max = 0;
-            int w = 65, h = 13, dw = 35, dh = 50, n = 44;
+            int w = 565, h = 130, dw = 35, dh = 50, n = 3;
             allCars = new PictureBox[n];
             for (int i = 0; i < n; i++)
             {
@@ -62,13 +63,13 @@ namespace Racing
                 p.Location = new Point(dw, dh + (h + 1) * i);
                 p.SizeMode = PictureBoxSizeMode.StretchImage;
                 p.Tag = i;
-                this.toolTip1.SetToolTip(p, $"sv[{i+1}] = {sv[i]}");
+                this.toolTip1.SetToolTip(p, $"sv[{i + 1}] = {sv[i]}");
                 picRoad.Controls.Add(p);
                 allCars[i] = p;
             }
         }
 
-        int max,i1, i2, i3;
+        int max, i1, i2, i3;
         private void timerLoad_Tick(object sender, EventArgs e)
         {
             if (allCars != null && allCars.Length > 0)
@@ -90,17 +91,24 @@ namespace Racing
                         }
                     }
                 }
-                PictureBox p1 = GetMaxBelow(this.Width,null);
+                PictureBox p1 = GetMaxBelow(this.Width, null);
                 i1 = (int)p1.Tag;
                 labelKQ1.Text = $"1st: sv[{i1 + 1}] = {sv[i1]}";
-                PictureBox p2 = GetMaxBelow(p1.Left,p1);
+                PictureBox p2 = GetMaxBelow(p1.Left, p1);
                 i2 = (int)p2.Tag;
                 labelKQ2.Text = $"2nd: sv[{i2 + 1}] = {sv[i2]}";
-                PictureBox p3 = GetMaxBelow(p2.Left,p2);
+                PictureBox p3 = GetMaxBelow(p2.Left, p2);
                 i3 = (int)p3.Tag;
                 labelKQ3.Text = $"3rd: sv[{i3 + 1}] = {sv[i3]}";
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Parent = picRoad;
+        }
+
         PictureBox GetMaxBelow(int MAX, PictureBox box)
         {
             int max = 0;

@@ -39,8 +39,11 @@
             this.labelKQ2 = new System.Windows.Forms.Label();
             this.labelKQ3 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picRoad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // cmdLoad
@@ -86,7 +89,7 @@
             this.picRoad.Image = global::Racing.Properties.Resources.p1;
             this.picRoad.Location = new System.Drawing.Point(0, 68);
             this.picRoad.Name = "picRoad";
-            this.picRoad.Size = new System.Drawing.Size(1298, 578);
+            this.picRoad.Size = new System.Drawing.Size(1340, 585);
             this.picRoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picRoad.TabIndex = 7;
             this.picRoad.TabStop = false;
@@ -96,9 +99,9 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = global::Racing.Properties.Resources.p2;
-            this.pictureBox1.Location = new System.Drawing.Point(1298, 68);
+            this.pictureBox1.Location = new System.Drawing.Point(1340, 68);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 578);
+            this.pictureBox1.Size = new System.Drawing.Size(114, 585);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -126,11 +129,33 @@
             this.labelKQ3.TabIndex = 13;
             this.labelKQ3.Text = "3rd";
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Racing.Properties.Resources.green_car;
+            this.pictureBox2.Location = new System.Drawing.Point(27, 131);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(286, 110);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 14;
+            this.pictureBox2.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(871, 40);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 72);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1410, 645);
+            this.ClientSize = new System.Drawing.Size(1452, 652);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.labelKQ3);
             this.Controls.Add(this.labelKQ2);
             this.Controls.Add(this.pictureBox1);
@@ -143,6 +168,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.picRoad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -159,6 +185,8 @@
         private System.Windows.Forms.Label labelKQ2;
         private System.Windows.Forms.Label labelKQ3;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button1;
     }
 }
 
