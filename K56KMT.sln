@@ -24,11 +24,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tuan1", "tuan1", "{3DCAEA44-CB25-44B8-87AA-C70B3D59F704}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tuan2", "tuan2", "{4E891C49-BC23-4EF5-9155-DBA526DAFCBE}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Desktop\C# 31-03-2023.pptx = ..\..\..\Desktop\C# 31-03-2023.pptx
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testVitri", "testVitri\testVitri.csproj", "{37C2F0B6-EA56-4559-B3BF-906C1C3D2C5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Racing", "Racing\Racing.csproj", "{25F59657-E383-4B45-B726-A0085591B9D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -76,6 +75,10 @@ Global
 		{37C2F0B6-EA56-4559-B3BF-906C1C3D2C5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37C2F0B6-EA56-4559-B3BF-906C1C3D2C5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37C2F0B6-EA56-4559-B3BF-906C1C3D2C5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25F59657-E383-4B45-B726-A0085591B9D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25F59657-E383-4B45-B726-A0085591B9D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25F59657-E383-4B45-B726-A0085591B9D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25F59657-E383-4B45-B726-A0085591B9D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -91,6 +94,7 @@ Global
 		{E956FDD6-E346-4EDA-A3B2-694E6681B40E} = {4E891C49-BC23-4EF5-9155-DBA526DAFCBE}
 		{25B84DFC-7D81-4401-986F-C865392D7592} = {4E891C49-BC23-4EF5-9155-DBA526DAFCBE}
 		{37C2F0B6-EA56-4559-B3BF-906C1C3D2C5D} = {4E891C49-BC23-4EF5-9155-DBA526DAFCBE}
+		{25F59657-E383-4B45-B726-A0085591B9D7} = {4E891C49-BC23-4EF5-9155-DBA526DAFCBE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9862D2F9-AF23-4D17-B25E-53D10C3D210C}
