@@ -125,6 +125,11 @@ namespace TuongTacDB
         }
 
         void BienDoi(string From, int target) { 
+
+            //target=0: đi học
+            //       1: vắng
+            //       2: muộn
+            //   ko lưu (null) đi học
             //chọn 1 dòng trên lưới
             //nếu dòng đó nói sv Vắng mặt
             //thì: lấy masv, id buổi điểm danh
