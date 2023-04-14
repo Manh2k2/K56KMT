@@ -34,12 +34,12 @@ namespace db_Json
 
         private void cmdLoad_Click(object sender, EventArgs e)
         {
-            SV sv = new SV();
-            sv.LoadDB();
+            SV sv = new SV();           //tạo đối tượng
+            sv.LoadDB();                //load dữ liệu
 
-            txtTen.Text = sv.ten;
-            numTuoi.Value = sv.tuoi;
-            if (sv.diem != null && sv.diem.Count == 3)
+            txtTen.Text = sv.ten;       //show lên form
+            numTuoi.Value = sv.tuoi;    //show lên form
+            if (sv.diem != null && sv.diem.Count == 3) //riêng List thì check trước
             {
                 txtToan.Text = sv.diem[0].ToString();
                 txtLy.Text = sv.diem[1].ToString();
@@ -51,6 +51,7 @@ namespace db_Json
 
         private void cmdClear_Click(object sender, EventArgs e)
         {
+            //xoá mọi thứ trên form
             txtTen.Clear();
             numTuoi.Value = 0;
             txtToan.Clear();

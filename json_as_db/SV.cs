@@ -35,13 +35,23 @@ namespace db_Json
             this.tuoi = t.tuoi;
             this.diem = t.diem;
         }
-
+        private static float getFloat(string f)
+        {
+            try
+            {
+                return float.Parse(f);
+            }
+            catch
+            {
+                return 0.0f;
+            }
+        }
         public static List<float> Gen3Diem(string d1, string d2, string d3)
         {
             List<float> diem = new List<float>();
-            diem.Add(float.Parse(d1));
-            diem.Add(float.Parse(d2));
-            diem.Add(float.Parse(d3));
+            diem.Add(getFloat(d1));
+            diem.Add(getFloat(d2));
+            diem.Add(getFloat(d3));
             return diem;
         }
         public void SaveDB()
