@@ -53,7 +53,8 @@ namespace db_Json
         //hàm clone đối tượng
         public SV Clone(SV sv)
         {
-            //clone là tạo bản sao, giống value nhưng là obj khác -> nên phải dùng NEW
+            //clone là tạo bản sao,
+            //giống value nhưng là obj khác -> nên phải dùng NEW
             return new SV(sv.ten, sv.tuoi, sv.diem);
         }
         public void LoadDB()
