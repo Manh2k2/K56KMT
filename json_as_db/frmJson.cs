@@ -29,7 +29,7 @@ namespace db_Json
             //lưu file mà data dưới dạng json
             sv.SaveDB();
 
-            MessageBox.Show(sv.ToJson());
+            MessageBox.Show(sv.ToJson(),"Json review");
         }
 
         private void cmdLoad_Click(object sender, EventArgs e)
@@ -46,7 +46,7 @@ namespace db_Json
                 txtHoa.Text = sv.diem[2].ToString();
             }
 
-            MessageBox.Show(sv.ToJson());
+            MessageBox.Show(sv.ToJson(), "Json review");
         }
 
         private void cmdClear_Click(object sender, EventArgs e)
