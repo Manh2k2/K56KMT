@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.btnViewAll = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.cmdLoadID_DD = new System.Windows.Forms.Button();
-            this.btnUpdateMuon = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuMuon_Vang = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuVang_diHoc = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuVang_Muon = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDihoc_Vang = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmdLoadID_DD = new System.Windows.Forms.Button();
+            this.btnUpdateMuon = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,44 @@
             this.dataGridView1.Size = new System.Drawing.Size(776, 460);
             this.dataGridView1.TabIndex = 1;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuMuon_Vang,
+            this.mnuVang_diHoc,
+            this.mnuVang_Muon,
+            this.mnuDihoc_Vang});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(155, 92);
+            // 
+            // mnuMuon_Vang
+            // 
+            this.mnuMuon_Vang.Name = "mnuMuon_Vang";
+            this.mnuMuon_Vang.Size = new System.Drawing.Size(154, 22);
+            this.mnuMuon_Vang.Text = "Muộn -> Vắng";
+            this.mnuMuon_Vang.Click += new System.EventHandler(this.mnuMuon_Vang_Click);
+            // 
+            // mnuVang_diHoc
+            // 
+            this.mnuVang_diHoc.Name = "mnuVang_diHoc";
+            this.mnuVang_diHoc.Size = new System.Drawing.Size(154, 22);
+            this.mnuVang_diHoc.Text = "Vắng -> Đi học";
+            this.mnuVang_diHoc.Click += new System.EventHandler(this.mnuVang_diHoc_Click);
+            // 
+            // mnuVang_Muon
+            // 
+            this.mnuVang_Muon.Name = "mnuVang_Muon";
+            this.mnuVang_Muon.Size = new System.Drawing.Size(154, 22);
+            this.mnuVang_Muon.Text = "Vắng -> Muộn";
+            this.mnuVang_Muon.Click += new System.EventHandler(this.mnuVang_Muon_Click);
+            // 
+            // mnuDihoc_Vang
+            // 
+            this.mnuDihoc_Vang.Name = "mnuDihoc_Vang";
+            this.mnuDihoc_Vang.Size = new System.Drawing.Size(154, 22);
+            this.mnuDihoc_Vang.Text = "Đi học -> Vắng";
+            this.mnuDihoc_Vang.Click += new System.EventHandler(this.mnuDihoc_Vang_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -100,44 +138,6 @@
             this.btnUpdateMuon.UseVisualStyleBackColor = true;
             this.btnUpdateMuon.Click += new System.EventHandler(this.btnUpdateMuon_Click);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuMuon_Vang,
-            this.mnuVang_diHoc,
-            this.mnuVang_Muon,
-            this.mnuDihoc_Vang});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 114);
-            // 
-            // mnuMuon_Vang
-            // 
-            this.mnuMuon_Vang.Name = "mnuMuon_Vang";
-            this.mnuMuon_Vang.Size = new System.Drawing.Size(180, 22);
-            this.mnuMuon_Vang.Text = "Muộn -> Vắng";
-            this.mnuMuon_Vang.Click += new System.EventHandler(this.mnuMuon_Vang_Click);
-            // 
-            // mnuVang_diHoc
-            // 
-            this.mnuVang_diHoc.Name = "mnuVang_diHoc";
-            this.mnuVang_diHoc.Size = new System.Drawing.Size(180, 22);
-            this.mnuVang_diHoc.Text = "Vắng -> Đi học";
-            this.mnuVang_diHoc.Click += new System.EventHandler(this.mnuVang_diHoc_Click);
-            // 
-            // mnuVang_Muon
-            // 
-            this.mnuVang_Muon.Name = "mnuVang_Muon";
-            this.mnuVang_Muon.Size = new System.Drawing.Size(180, 22);
-            this.mnuVang_Muon.Text = "Vắng -> Muộn";
-            this.mnuVang_Muon.Click += new System.EventHandler(this.mnuVang_Muon_Click);
-            // 
-            // mnuDihoc_Vang
-            // 
-            this.mnuDihoc_Vang.Name = "mnuDihoc_Vang";
-            this.mnuDihoc_Vang.Size = new System.Drawing.Size(180, 22);
-            this.mnuDihoc_Vang.Text = "Đi học -> Vắng";
-            this.mnuDihoc_Vang.Click += new System.EventHandler(this.mnuDihoc_Vang_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,7 +149,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnViewAll);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "demo C# + Sql + Sql Server . (Note: Run Script.sql để tạo db, dữ liệu và  sp_)";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
