@@ -1,6 +1,6 @@
 ﻿namespace db_SqlServer
 {
-    partial class Form1
+    partial class frmSqlServer
     {
         /// <summary>
         /// Required designer variable.

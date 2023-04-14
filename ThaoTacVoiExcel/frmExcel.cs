@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace db_Excel
 {
-    public partial class Form1 : Form
+    public partial class frmExcel : Form
     {
-        public Form1()
+        public frmExcel()
         {
             InitializeComponent();
         }

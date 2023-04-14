@@ -1,6 +1,6 @@
 ﻿namespace db_Text
 {
-    partial class Form1
+    partial class frmText
     {
         /// <summary>
         /// Required designer variable.

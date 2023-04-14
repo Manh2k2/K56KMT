@@ -1,6 +1,6 @@
 ﻿namespace db_Excel
 {
-    partial class Form1
+    partial class frmExcel
     {
         /// <summary>
         /// Required designer variable.

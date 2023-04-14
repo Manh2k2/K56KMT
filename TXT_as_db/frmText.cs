@@ -10,9 +10,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 namespace db_Text
 {
-    public partial class Form1 : Form
+    public partial class frmText : Form
     {
-        public Form1()
+        public frmText()
         {
             InitializeComponent();
         }
