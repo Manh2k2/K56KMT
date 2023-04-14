@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace TXT_as_db
+namespace db_Text
 {
     internal static class Program
     {

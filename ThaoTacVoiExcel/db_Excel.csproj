@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2888ADF6-8C56-48BE-B4C6-D9941C9A7581}</ProjectGuid>
+    <ProjectGuid>{F29D33BF-DCE0-42E5-902B-7B2C077C020D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>TuongTacDB</RootNamespace>
-    <AssemblyName>TuongTacDB</AssemblyName>
+    <RootNamespace>ThaoTacVoiExcel</RootNamespace>
+    <AssemblyName>db_Excel</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

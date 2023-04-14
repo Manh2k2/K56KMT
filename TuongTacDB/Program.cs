@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace TuongTacDB
+namespace db_SqlServer
 {
     internal static class Program
     {

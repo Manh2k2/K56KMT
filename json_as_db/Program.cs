@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace json_as_db
+namespace db_Json
 {
     internal static class Program
     {

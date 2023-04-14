@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace ThaoTacVoiExcel
+namespace db_Excel
 {
     public partial class Form1 : Form
     {

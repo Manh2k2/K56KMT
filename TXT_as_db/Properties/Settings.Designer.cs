@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TXT_as_db.Properties {
+namespace db_Text.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

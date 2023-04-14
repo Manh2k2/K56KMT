@@ -41,13 +41,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testUI", "testUI\testUI.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tuan4", "tuan4", "{041997F5-E8F2-4350-95C4-8DCD78B86F8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TuongTacDB", "TuongTacDB\TuongTacDB.csproj", "{2888ADF6-8C56-48BE-B4C6-D9941C9A7581}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "db_SqlServer", "TuongTacDB\db_SqlServer.csproj", "{2888ADF6-8C56-48BE-B4C6-D9941C9A7581}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThaoTacVoiExcel", "ThaoTacVoiExcel\ThaoTacVoiExcel.csproj", "{F29D33BF-DCE0-42E5-902B-7B2C077C020D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "db_Excel", "ThaoTacVoiExcel\db_Excel.csproj", "{F29D33BF-DCE0-42E5-902B-7B2C077C020D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TXT_as_db", "TXT_as_db\TXT_as_db.csproj", "{400BB98F-7D65-4F69-A5C5-FE6C97A3755C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "db_Text", "TXT_as_db\db_Text.csproj", "{400BB98F-7D65-4F69-A5C5-FE6C97A3755C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "json_as_db", "json_as_db\json_as_db.csproj", "{A085ECE5-E6DA-44D8-92ED-EE9B6D26A6D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "db_Json", "json_as_db\db_Json.csproj", "{A085ECE5-E6DA-44D8-92ED-EE9B6D26A6D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

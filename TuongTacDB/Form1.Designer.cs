@@ -1,4 +1,4 @@
-﻿namespace TuongTacDB
+﻿namespace db_SqlServer
 {
     partial class Form1
     {

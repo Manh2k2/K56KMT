@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace TuongTacDB
+namespace db_SqlServer
 {
     public partial class Form1 : Form
     {

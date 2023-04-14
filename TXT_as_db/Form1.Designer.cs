@@ -1,4 +1,4 @@
-﻿namespace TXT_as_db
+﻿namespace db_Text
 {
     partial class Form1
     {

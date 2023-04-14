@@ -1,4 +1,4 @@
-﻿namespace json_as_db
+﻿namespace db_Json
 {
     partial class Form1
     {

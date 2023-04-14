@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace json_as_db
+namespace db_Json
 {
     public partial class Form1 : Form
     {

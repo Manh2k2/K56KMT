@@ -1,4 +1,4 @@
-﻿namespace ThaoTacVoiExcel
+﻿namespace db_Excel
 {
     partial class Form1
     {

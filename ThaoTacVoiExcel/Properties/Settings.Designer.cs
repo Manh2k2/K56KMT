@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ThaoTacVoiExcel.Properties
+namespace db_Excel.Properties
 {
 
 

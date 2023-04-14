@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace ThaoTacVoiExcel
+namespace db_Excel
 {
     internal static class Program
     {

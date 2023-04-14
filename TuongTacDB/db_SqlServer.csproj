@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F29D33BF-DCE0-42E5-902B-7B2C077C020D}</ProjectGuid>
+    <ProjectGuid>{2888ADF6-8C56-48BE-B4C6-D9941C9A7581}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ThaoTacVoiExcel</RootNamespace>
-    <AssemblyName>ThaoTacVoiExcel</AssemblyName>
+    <RootNamespace>db_SqlServer</RootNamespace>
+    <AssemblyName>db_SqlServer</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -59,6 +59,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
