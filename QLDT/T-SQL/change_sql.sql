@@ -100,8 +100,8 @@ BEGIN
 	with T as(
 		select distinct H.MaMon,  C.STT
 		from HocTap H join SV S on (H.masv=S.masv)and(S.masv=@masv)and(H.maTT=1 or H.maTT=5)
-		              join Nganh N on N.maNganh=S.maNganh
-					  join ChiTiet C on (C.manganh=N.maNganh)and(C.mamon=H.maMon)
+			join Nganh N on N.maNganh=S.maNganh
+			join ChiTiet C on (C.manganh=N.maNganh)and(C.mamon=H.maMon)
 	)
 	insert into @KQ(mamon)
 		select top (@n) maMon 
@@ -137,8 +137,8 @@ BEGIN
 	with T as(
 		select S.masv, H.MaMon, C.STT
 		from HocTap H join SV S on H.masv=S.masv and H.maMon=@maMon
-					join Nganh N on N.maNganh=S.maNganh
-					join ChiTiet C on C.manganh=N.maNganh and C.mamon=H.maMon
+			join Nganh N on N.maNganh=S.maNganh
+			join ChiTiet C on C.manganh=N.maNganh and C.mamon=H.maMon
 		where (H.maTT=1 or H.maTT=5)
 			and(H.maMon in (select maMon from dbo.fn_ds_mon_se_hoc(S.masv,@n)))
 	)
@@ -457,9 +457,9 @@ BEGIN
 		order by T.SL desc;
 
 		DECLARE C CURSOR LOCAL FAST_FORWARD READ_ONLY FOR
-					select L.maLop, L.maMon
-					from Lop as L
-					where L.maDot=@maDot;
+			select L.maLop, L.maMon
+			from Lop as L
+			where L.maDot=@maDot;
 		declare @malop int, @mamon varchar(7);
 		OPEN C;
 		FETCH NEXT FROM C INTO @malop,@mamon;
@@ -527,7 +527,7 @@ BEGIN
 			N.tenNganh as [Ngành học]
 		from SV S join Nganh N on S.maNganh=N.maNganh
 		where (masv like @q)
-		    or(hoten like @q) 
+			or(hoten like @q) 
 			or(ngaysinh like @q) 
 			or(tenNganh like @q) 
 		order by S.maNganh,masv;
@@ -548,8 +548,8 @@ BEGIN
 	begin
 		if(exists(select * from SV where masv=@masv))
 		  begin
-		    select @hoten=hoten from SV where masv=@masv;
-		    RaisError(N'Trùng mã sv: %s với tên %s rồi bạn ơi!',16,1,@masv,@hoten)
+			select @hoten=hoten from SV where masv=@masv;
+			RaisError(N'Trùng mã sv: %s với tên %s rồi bạn ơi!',16,1,@masv,@hoten)
 			return;
 		  end
 		insert into SV(masv,hoten,ngaysinh,gt,maNganh)
@@ -559,8 +559,8 @@ BEGIN
 	begin
 		if(exists(select * from SV where masv=@masv and masv!=@masv_cu))
 		  begin
-		    select @hoten=hoten from SV where masv=@masv;
-		    RaisError(N'Trùng mã sv: %s với tên %s rồi bạn ơi!',16,1,@masv,@hoten)
+			select @hoten=hoten from SV where masv=@masv;
+			RaisError(N'Trùng mã sv: %s với tên %s rồi bạn ơi!',16,1,@masv,@hoten)
 			return;
 		  end
 		update SV 
