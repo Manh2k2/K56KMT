@@ -1,6 +1,81 @@
-﻿USE [QLDT]
+﻿USE [master]
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_ds_mon_se_hoc]    Script Date: 21/04/2023 19:52:01 ******/
+/****** Object:  Database [QLDT]    Script Date: 22/04/2023 12:10:59 ******/
+CREATE DATABASE [QLDT]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'QLDT', FILENAME = N'D:\SQL2014\DB\QLDT.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+ LOG ON 
+( NAME = N'QLDT_log', FILENAME = N'D:\SQL2014\DB\QLDT_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+GO
+ALTER DATABASE [QLDT] SET COMPATIBILITY_LEVEL = 120
+GO
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [QLDT].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+ALTER DATABASE [QLDT] SET ANSI_NULL_DEFAULT OFF 
+GO
+ALTER DATABASE [QLDT] SET ANSI_NULLS OFF 
+GO
+ALTER DATABASE [QLDT] SET ANSI_PADDING OFF 
+GO
+ALTER DATABASE [QLDT] SET ANSI_WARNINGS OFF 
+GO
+ALTER DATABASE [QLDT] SET ARITHABORT OFF 
+GO
+ALTER DATABASE [QLDT] SET AUTO_CLOSE OFF 
+GO
+ALTER DATABASE [QLDT] SET AUTO_SHRINK OFF 
+GO
+ALTER DATABASE [QLDT] SET AUTO_UPDATE_STATISTICS ON 
+GO
+ALTER DATABASE [QLDT] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+ALTER DATABASE [QLDT] SET CURSOR_DEFAULT  GLOBAL 
+GO
+ALTER DATABASE [QLDT] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+ALTER DATABASE [QLDT] SET NUMERIC_ROUNDABORT OFF 
+GO
+ALTER DATABASE [QLDT] SET QUOTED_IDENTIFIER OFF 
+GO
+ALTER DATABASE [QLDT] SET RECURSIVE_TRIGGERS OFF 
+GO
+ALTER DATABASE [QLDT] SET  DISABLE_BROKER 
+GO
+ALTER DATABASE [QLDT] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+ALTER DATABASE [QLDT] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+ALTER DATABASE [QLDT] SET TRUSTWORTHY OFF 
+GO
+ALTER DATABASE [QLDT] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+ALTER DATABASE [QLDT] SET PARAMETERIZATION SIMPLE 
+GO
+ALTER DATABASE [QLDT] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+ALTER DATABASE [QLDT] SET HONOR_BROKER_PRIORITY OFF 
+GO
+ALTER DATABASE [QLDT] SET RECOVERY SIMPLE 
+GO
+ALTER DATABASE [QLDT] SET  MULTI_USER 
+GO
+ALTER DATABASE [QLDT] SET PAGE_VERIFY CHECKSUM  
+GO
+ALTER DATABASE [QLDT] SET DB_CHAINING OFF 
+GO
+ALTER DATABASE [QLDT] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+ALTER DATABASE [QLDT] SET TARGET_RECOVERY_TIME = 0 SECONDS 
+GO
+ALTER DATABASE [QLDT] SET DELAYED_DURABILITY = DISABLED 
+GO
+USE [QLDT]
+GO
+/****** Object:  UserDefinedFunction [dbo].[fn_ds_mon_se_hoc]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -37,7 +112,7 @@ BEGIN
 END
 
 GO
-/****** Object:  UserDefinedFunction [dbo].[fn_ds_sv_se_hoc]    Script Date: 21/04/2023 19:52:01 ******/
+/****** Object:  UserDefinedFunction [dbo].[fn_ds_sv_se_hoc]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -76,7 +151,7 @@ BEGIN
 END
 
 GO
-/****** Object:  Table [dbo].[ChiTiet]    Script Date: 21/04/2023 19:52:01 ******/
+/****** Object:  Table [dbo].[ChiTiet]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -97,7 +172,7 @@ CREATE TABLE [dbo].[ChiTiet](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[DangKy]    Script Date: 21/04/2023 19:52:02 ******/
+/****** Object:  Table [dbo].[DangKy]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -121,7 +196,7 @@ CREATE TABLE [dbo].[DangKy](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[Dot]    Script Date: 21/04/2023 19:52:02 ******/
+/****** Object:  Table [dbo].[Dot]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -141,7 +216,7 @@ CREATE TABLE [dbo].[Dot](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[HocTap]    Script Date: 21/04/2023 19:52:02 ******/
+/****** Object:  Table [dbo].[HocTap]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -163,7 +238,7 @@ CREATE TABLE [dbo].[HocTap](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[Lop]    Script Date: 21/04/2023 19:52:02 ******/
+/****** Object:  Table [dbo].[Lop]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -184,7 +259,7 @@ CREATE TABLE [dbo].[Lop](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[MonHoc]    Script Date: 21/04/2023 19:52:02 ******/
+/****** Object:  Table [dbo].[MonHoc]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -204,7 +279,7 @@ CREATE TABLE [dbo].[MonHoc](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[Nganh]    Script Date: 21/04/2023 19:52:02 ******/
+/****** Object:  Table [dbo].[Nganh]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -219,7 +294,7 @@ CREATE TABLE [dbo].[Nganh](
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[SV]    Script Date: 21/04/2023 19:52:02 ******/
+/****** Object:  Table [dbo].[SV]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -242,7 +317,7 @@ CREATE TABLE [dbo].[SV](
 GO
 SET ANSI_PADDING OFF
 GO
-/****** Object:  Table [dbo].[TrangThai]    Script Date: 21/04/2023 19:52:02 ******/
+/****** Object:  Table [dbo].[TrangThai]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -271,41 +346,49 @@ ALTER TABLE [dbo].[ChiTiet] CHECK CONSTRAINT [FK_ChiTiet_Nganh]
 GO
 ALTER TABLE [dbo].[DangKy]  WITH CHECK ADD  CONSTRAINT [FK_DangKy_Dot] FOREIGN KEY([maDot])
 REFERENCES [dbo].[Dot] ([maDot])
+ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[DangKy] CHECK CONSTRAINT [FK_DangKy_Dot]
 GO
 ALTER TABLE [dbo].[DangKy]  WITH CHECK ADD  CONSTRAINT [FK_DangKy_Lop] FOREIGN KEY([maLop])
 REFERENCES [dbo].[Lop] ([maLop])
 ON UPDATE CASCADE
+ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[DangKy] CHECK CONSTRAINT [FK_DangKy_Lop]
 GO
 ALTER TABLE [dbo].[DangKy]  WITH CHECK ADD  CONSTRAINT [FK_DangKy_MonHoc] FOREIGN KEY([maMon])
 REFERENCES [dbo].[MonHoc] ([maMon])
 ON UPDATE CASCADE
+ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[DangKy] CHECK CONSTRAINT [FK_DangKy_MonHoc]
 GO
 ALTER TABLE [dbo].[DangKy]  WITH CHECK ADD  CONSTRAINT [FK_DangKy_SV] FOREIGN KEY([masv])
 REFERENCES [dbo].[SV] ([masv])
 ON UPDATE CASCADE
+ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[DangKy] CHECK CONSTRAINT [FK_DangKy_SV]
 GO
 ALTER TABLE [dbo].[HocTap]  WITH CHECK ADD  CONSTRAINT [FK_HocTap_MonHoc] FOREIGN KEY([maMon])
 REFERENCES [dbo].[MonHoc] ([maMon])
 ON UPDATE CASCADE
+ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[HocTap] CHECK CONSTRAINT [FK_HocTap_MonHoc]
 GO
 ALTER TABLE [dbo].[HocTap]  WITH CHECK ADD  CONSTRAINT [FK_HocTap_SV] FOREIGN KEY([masv])
 REFERENCES [dbo].[SV] ([masv])
 ON UPDATE CASCADE
+ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[HocTap] CHECK CONSTRAINT [FK_HocTap_SV]
 GO
 ALTER TABLE [dbo].[HocTap]  WITH CHECK ADD  CONSTRAINT [FK_HocTap_TrangThai] FOREIGN KEY([maTT])
 REFERENCES [dbo].[TrangThai] ([maTT])
+ON UPDATE CASCADE
+ON DELETE CASCADE
 GO
 ALTER TABLE [dbo].[HocTap] CHECK CONSTRAINT [FK_HocTap_TrangThai]
 GO
@@ -321,7 +404,7 @@ ON UPDATE CASCADE
 GO
 ALTER TABLE [dbo].[SV] CHECK CONSTRAINT [FK_SV_SV]
 GO
-/****** Object:  StoredProcedure [dbo].[SP_MoLop]    Script Date: 21/04/2023 19:52:02 ******/
+/****** Object:  StoredProcedure [dbo].[SP_MoLop]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -400,14 +483,15 @@ BEGIN
 END
 
 GO
-/****** Object:  StoredProcedure [dbo].[SP_SV]    Script Date: 21/04/2023 19:52:02 ******/
+/****** Object:  StoredProcedure [dbo].[SP_SV]    Script Date: 22/04/2023 12:10:59 ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		dp duy cop
--- Create date: 21.4.2023
+-- Author:		Do duy cop
+-- Create date: 21.04.2023
+-- Modify date: 22.04.2023
 -- Description:	xử lý 6 thao tác cơ bản với table SV<--n--1--Nganh
 -- =============================================
 CREATE PROCEDURE [dbo].[SP_SV]
@@ -471,7 +555,7 @@ BEGIN
 		insert into SV(masv,hoten,ngaysinh,gt,maNganh)
 		values(@masv,@hoten,@ngaysinh,@gt,@maNganh);
 	end
-	else if(@action='Edit_SV')
+	else if(@action='EDIT_SV')
 	begin
 		if(exists(select * from SV where masv=@masv and masv!=@masv_cu))
 		  begin
@@ -483,6 +567,19 @@ BEGIN
 		set masv=@masv,hoten=@hoten,ngaysinh=@ngaysinh,gt=@gt,maNganh=@maNganh
 		where masv=@masv_cu;
 	end
+	else if(@action='DELETE_SV')
+	begin
+		if(not exists(select * from SV where masv=@masv))
+		  begin
+		    RaisError(N'Sai mã sv rồi, không có mã %s trong csdl bạn ơi!',16,1,@masv)
+			return;
+		  end
+		delete from SV where masv=@masv;
+	end
 END
 
+GO
+USE [master]
+GO
+ALTER DATABASE [QLDT] SET  READ_WRITE 
 GO
