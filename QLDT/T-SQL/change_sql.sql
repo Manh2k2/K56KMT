@@ -571,7 +571,7 @@ BEGIN
 	begin
 		if(not exists(select * from SV where masv=@masv))
 		  begin
-		    RaisError(N'Sai mã sv rồi, không có mã %s trong csdl bạn ơi!',16,1,@masv)
+			RaisError(N'Sai mã sv rồi, không có mã %s trong csdl bạn ơi!',16,1,@masv)
 			return;
 		  end
 		delete from SV where masv=@masv;
