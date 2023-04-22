@@ -52,9 +52,15 @@ namespace QLDT
         }
         int EditSV(SV sv, string masv_cu)
         {
-            SqlCommand cm = db.GetCmd("SP_SV", "Edit_SV");
+            SqlCommand cm = db.GetCmd("SP_SV", "EDIT_SV");
             PassParameters(ref cm, sv);
             cm.Parameters.Add("@masv_cu", SqlDbType.VarChar, 13).Value = masv_cu;
+            return db.RunSQL(cm);
+        }
+        int DeleteSV(SV sv)
+        {
+            SqlCommand cm = db.GetCmd("SP_SV", "DELETE_SV");
+            cm.Parameters.Add("@masv", SqlDbType.VarChar, 13).Value = sv.masv;
             return db.RunSQL(cm);
         }
         DateTime GetDate(string strDate)
@@ -112,16 +118,26 @@ namespace QLDT
                 }
             }
         }
-        private void btnEdit_Click(object sender, EventArgs e)
+
+        SV Get_SV_seleted()
         {
             //phải lấy đc key==masv của row đang chọn
             if (dgv.SelectedRows.Count > 0)
             {
                 string masv = (string)(dgv.SelectedRows[0].Cells["masv"].Value);
+                SV sv = Get1SV(masv);
+                return sv;
+            }
+            return null;
+        }
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            SV sv = Get_SV_seleted();
+            if (sv != null)
+            {
                 //gọi form con lên để edit
                 //cần truyền những thứ có sẵn
                 //bố lấy all info of row selected => SV để truyền sang
-                SV sv = Get1SV(masv);
 
                 frmAddEditSV f = new frmAddEditSV();
                 f.db = db;
@@ -134,6 +150,34 @@ namespace QLDT
                         //nợ SP action=EDIT_SV
                         int kq = EditSV(f.sv, sv.masv);
                         if (kq == 1) ListAll();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "ERROR");
+                    }
+                }
+            }
+        }
+
+        private void cmdDelete_Click(object sender, EventArgs e)
+        {
+            SV sv = Get_SV_seleted();
+            if (sv != null)
+            {
+                DialogResult confirm = MessageBox.Show(this, $"Xác nhận xoá SV\n\n- mssv: {sv.masv}\n- Họ tên: {sv.hoten}\n- Ngày sinh: {sv.ngaysinh.ToString("dd/MM/yyyy")}", "Xác nhận?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                if (confirm == DialogResult.Yes)
+                {
+                    try
+                    {
+                        //cập nhật lại thông tin trong db
+                        //nợ SP action=EDIT_SV
+                        int kq = DeleteSV(sv);
+                        if (kq == 1)
+                        {
+                            //ListAll(); //đây là tải lại toàn bộ
+                            //nhưng vì là xoá đi, nên có thể chỉ xoá cái row đang bị delete này đi ko?
+                            dgv.Rows.Remove(dgv.SelectedRows[0]);
+                        }
                     }
                     catch (Exception ex)
                     {

@@ -91,7 +91,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="QLDT_TNUT.sql" />
+    <Content Include="T-SQL\change_sql.sql" />
+    <Content Include="T-SQL\QLDT_TNUT.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
